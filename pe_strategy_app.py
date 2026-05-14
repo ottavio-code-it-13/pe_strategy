@@ -770,8 +770,8 @@ with tab1:
         detail_cols = []
         if strategy == "Operational Improvement":
             detail_cols = [c for c in ["operational_driver", "upside_assoluto_pp",
-                                       "ebitda_margin_2024", "gap_vs_peer",
-                                       "recoverability_score_base", "distress_penalty"]
+                                       "recoverability_score_base", "recoverability_score_historical",
+                                       "recoverability_score", "distress_penalty"]
                            if c in ranking_df.columns]
         elif strategy == "Cash Flow Resilience / Deleverage":
             detail_cols = [c for c in ["resilience_class", "probability_of_default",
@@ -805,9 +805,9 @@ with tab1:
             "combined_score": "Combined",
             "operational_driver": "Driver",
             "upside_assoluto_pp": "Upside pp",
-            "ebitda_margin_2024": "EBITDA %",
-            "gap_vs_peer": "Gap Peer",
-            "recoverability_score_base": "Recover.",
+            "recoverability_score_base": "Recover. B",
+            "recoverability_score_historical": "Recover. H.",
+            "recoverability_score": "Recover.",
             "distress_penalty": "Distress",
             "resilience_class": "Classe",
             "probability_of_default": "PD",
@@ -1181,3 +1181,4 @@ with tab4:
                 row_df.columns = ["Campo", "Valore"]
                 row_df = row_df[row_df["Valore"].notna()]
                 st.dataframe(row_df, use_container_width=True, hide_index=True)
+
