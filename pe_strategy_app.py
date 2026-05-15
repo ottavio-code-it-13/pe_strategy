@@ -31,6 +31,7 @@ _LOCAL_FILES = {
         "output_persona3.xlsx",
     ],
     "p4": [
+        "output_modello_4_cash_flow_resilience.xlsx",
         "Output_persona4_cash_flow_resilience_output.xlsx",
         "cash_flow_resilience_output.xlsx",
         "output_persona4.xlsx",
